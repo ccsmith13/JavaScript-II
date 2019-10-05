@@ -73,4 +73,11 @@ function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+  
+  uniqueArray = array.filter(function(item, pos, self) {
+    return self.indexOf(item) == pos;
+  });
+  return cb(uniqueArray);
 }
+var exampleArray = ["Mike","Matt","Nancy","Adam","Jenny","Nancy","Carl"];
+removeDuplicates(exampleArray, function(n){return n += " IT WORKS!!!"});
