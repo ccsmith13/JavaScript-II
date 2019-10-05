@@ -4,6 +4,14 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 
+function buildName(name) { 
+  var greeting = "Hello, " + name + "!"; 
+  var sayName = function() {
+      var welcome = greeting + " Welcome!";
+      console.log(greeting); 
+  };
+  return sayName; 
+}
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
